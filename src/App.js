@@ -1,31 +1,8 @@
+// App.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
-const PokemonCard = ({ pokemon }) => {
-  const { id, name, image, types, height, weight, stats, evolvesTo } = pokemon;
-
-  return (
-    <div key={id} className="pokemon-card">
-      <img src={image} alt={name.en} />
-      <h3>{name.en}</h3>
-      <p>Type: {types.map(typeId => <span key={typeId}>{typeId} </span>)}</p>
-      <p>Height: {height} m</p>
-      <p>Weight: {weight} kg</p>
-      <p>Stats:</p>
-      <ul>
-        {Object.entries(stats).map(([stat, value]) => (
-          <li key={stat}>{stat}: {value}</li>
-        ))}
-      </ul>
-      <p>Evolves To:</p>
-      <ul>
-        {Object.entries(evolvesTo).map(([evolutionId, condition]) => (
-          <li key={evolutionId}>{evolutionId}: {condition}</li>
-        ))}
-      </ul>
-    </div>
-  );
-};
+import PokemonCard from './PokemonCard'; // Update the path as needed
+import './App.css';
 
 const App = () => {
   const [pokemonData, setPokemonData] = useState([]);
