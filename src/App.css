@@ -111,3 +111,15 @@ h1 {
   margin-bottom: 5px;
   color: #777;
 }
+
+body {
+  font-family: 'Roboto', sans-serif; /* Apply the chosen font to the entire body */
+  background-color: #ffeb3b;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
