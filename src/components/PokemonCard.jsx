@@ -1,8 +1,12 @@
-// PokemonCard.js
-import React from 'react';
+import React, { useState } from 'react';
+import { createPortal } from 'react-dom';
+import Portal from './Portal';
 
 const PokemonCard = ({ pokemon }) => {
   const { id, name, image, types, height, weight, stats, evolvesTo } = pokemon;
+
+   const [showModal, setShowModal] = useState(false);
+  
 
   return (
     <div key={id} className="card pokemon-card bg-yellow">
@@ -24,9 +28,13 @@ const PokemonCard = ({ pokemon }) => {
             <li key={evolutionId}>{evolutionId}: {condition}</li>
           ))}
         </ul>
-      </div>
+        <div>
+          <Portal />
+        </div>
     </div>
+      </div>
   );
 };
 
 export default PokemonCard;
+

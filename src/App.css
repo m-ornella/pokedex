@@ -123,3 +123,25 @@ body {
   min-height: 100vh;
 }
 
+/*PokemonDetails Modal*/
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 50%;
+  background: white/* semi-transparent overlay */;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
