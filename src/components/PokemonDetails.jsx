@@ -3,6 +3,7 @@ export default function PokemonDetails({ onClose }) {
     <div className="modal-container">
     <div className="modal">
       <div>Pokemon</div>
+      <div></div>
       <button onClick={onClose}>Close</button>
     </div>
     </div>
