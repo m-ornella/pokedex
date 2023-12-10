@@ -137,11 +137,3 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3); /* Optional: Add a semi-transparent overlay */
 }
-
-.modal {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-

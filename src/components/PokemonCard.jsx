@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import Portal from './Portal';
 
 const PokemonCard = ({ pokemon }) => {
-  const { id, name, image, types, height, weight, stats, evolvesTo } = pokemon;
+  const { id, name, image, types, height, weight, stats, evolvesTo, generation } = pokemon;
 
    const [showModal, setShowModal] = useState(false);
   
@@ -16,20 +16,9 @@ const PokemonCard = ({ pokemon }) => {
         <p className="card-text">Type: {types.map(typeId => <span key={typeId}>{typeId} </span>)}</p>
         <p className="card-text">Height: {height} m</p>
         <p className="card-text">Weight: {weight} kg</p>
-        <p className="card-text">Stats:</p>
-        <ul className="list-unstyled">
-          {Object.entries(stats).map(([stat, value]) => (
-            <li key={stat}>{stat}: {value}</li>
-          ))}
-        </ul>
-        <p className="card-text">Evolves To:</p>
-        <ul className="list-unstyled">
-          {Object.entries(evolvesTo).map(([evolutionId, condition]) => (
-            <li key={evolutionId}>{evolutionId}: {condition}</li>
-          ))}
-        </ul>
+        <p className="card-text">Generation: {generation} </p>
         <div>
-          <Portal />
+          <Portal key={pokemon.id} pokemon={pokemon} />
         </div>
     </div>
       </div>
