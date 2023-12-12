@@ -1,9 +1,13 @@
+import PokemonImageSwitcher from "./PokemonImageSwitcher";
+
 const PokemonDetails = ({ onClose, pokemon }) => {
   const { id, name, image, types, height, weight, stats, evolvesTo } = pokemon;
   return (
     <div className="modal-container">
     <div key={id} className="card pokemon-card modal">
-      <img src={image} alt={name.en} className="card-img-top" />
+    <PokemonImageSwitcher
+            key={pokemon.id} pokemon={pokemon}
+          />
       <div className="card-body">
         <h5 className="card-title">{name.en}</h5>
         <p className="card-text">Type: {types.map(typeId => <span key={typeId}>{typeId} </span>)}</p>
@@ -21,6 +25,7 @@ const PokemonDetails = ({ onClose, pokemon }) => {
             <li key={evolutionId}>{evolutionId}: {condition}</li>
           ))}
         </ul>
+
       <button onClick={onClose}>Close</button>
     </div>
     </div>
