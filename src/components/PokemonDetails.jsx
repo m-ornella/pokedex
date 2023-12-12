@@ -4,11 +4,14 @@ const PokemonDetails = ({ onClose, pokemon }) => {
   const { id, name, image, types, height, weight, stats, evolvesTo } = pokemon;
   return (
     <div className="modal-container">
-    <div key={id} className="card pokemon-card modal">
+    <div key={id} className="modal-card">
     <PokemonImageSwitcher
             key={pokemon.id} pokemon={pokemon}
           />
       <div className="card-body">
+        <div className="close-btn container">
+      <button className="close-btn" onClick={onClose}>x</button>
+      </div>
         <h5 className="card-title">{name.en}</h5>
         <p className="card-text">Type: {types.map(typeId => <span key={typeId}>{typeId} </span>)}</p>
         <p className="card-text">Height: {height} m</p>
@@ -26,7 +29,7 @@ const PokemonDetails = ({ onClose, pokemon }) => {
           ))}
         </ul>
 
-      <button onClick={onClose}>Close</button>
+      
     </div>
     </div>
     </div>

@@ -24,7 +24,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>Pokédex</h1>
+      <h1>Pokedex</h1>
       <div className="pokemon-container">
         {pokemonData.map((pokemon) => (
           <PokemonCard key={pokemon.id} pokemon={pokemon} />

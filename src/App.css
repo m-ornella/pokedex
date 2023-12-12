@@ -1,14 +1,13 @@
 /* src/App.css */
-
 body {
-  background-color: #ffeb3b; /* Aesthetic yellow background for the whole page */
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffeb3b;
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Ensure the page takes at least the full height of the viewport */
+  min-height: 100vh;
 }
 
 h1 {
@@ -24,21 +23,26 @@ h1 {
 }
 
 .pokemon-card {
-  background-color: #fff; /* White background for each card */
-  border: 1px solid #ddd; /* Light gray border */
+  background-color: #fff; 
+  border: 1px solid #ddd; 
   border-radius: 10px;
   margin: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
-  overflow: hidden; /* Hide any overflowing content */
-  transition: transform 0.2s ease-in-out; /* Add a smooth transition effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  overflow: hidden; 
+  transition: transform 0.2s ease-in-out; 
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .pokemon-card:hover {
-  transform: scale(1.05); /* Scale up the card on hover for a slight zoom effect */
+  transform: scale(1.05);
 }
 
+
 .pokemon-card img {
-  max-width: 100%;
+  max-width: 200px;
   height: auto;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -46,6 +50,10 @@ h1 {
 
 .card-body {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-title {
@@ -64,67 +72,30 @@ h1 {
   list-style: none;
   margin: 0;
 }
-
 .list-unstyled li {
   margin-bottom: 5px;
   color: #777;
 }
 
-.pokemon-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s ease-in-out;
-  max-width: 200px; /* Set a maximum width for the card */
-  width: 100%; /* Ensure the card takes the full width within its container */
-}
-
-.pokemon-card:hover {
-  transform: scale(1.05);
-}
 
 .card-body {
   padding: 20px;
 }
 
-.card-title {
-  font-size: 1.5em;
-  color: #333;
-  margin-bottom: 10px;
-}
+/* See more*/
 
-.card-text {
-  color: #555;
-  margin-bottom: 10px;
+.see-more-btn{
+  padding: 0.5rem;
+  background-color: ;
+  border-radius: 5px;
+  border: 0;
 }
-
-.list-unstyled {
-  padding: 0;
-  list-style: none;
-  margin: 0;
-}
-
-.list-unstyled li {
-  margin-bottom: 5px;
-  color: #777;
-}
-
-body {
-  font-family: 'Roboto', sans-serif; /* Apply the chosen font to the entire body */
-  background-color: #ffeb3b;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+.see-more-btn:hover{
+  background-color: darkgrey;
+  cursor: pointer;
 }
 
 /*PokemonDetails Modal*/
-
 
 .modal-container {
   display: flex;
@@ -133,7 +104,62 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vh;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.3); /* Optional: Add a semi-transparent overlay */
 }
+
+.modal-card{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  max-height: 80%;
+  background-color: #fff;
+  border-radius: 10px;
+
+}
+
+.image-toggle-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-btn {
+  width: 30px;
+  height: 30px;
+  background-color: #FAFAFA;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 14px;
+  border: none;
+}
+.close-btn:hover{
+  background-color: #ebebeb;
+}
+
+.image-switcher-container {
+  max-width: 100%;
+}
+
+.image-toggle-container {
+  position: relative;
+}
+
+.modal-img {
+  width: 100%;
+  height: auto;
+  max-height: 350px;
+}
+
+
+
+
+

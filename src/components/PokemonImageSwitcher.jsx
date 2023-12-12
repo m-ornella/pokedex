@@ -11,12 +11,12 @@ const PokemonImageSwitcher = ({pokemon})=> {
     return (
         <div>
           {image && image_shiny && (
-            <>
-              <img src={isShiny ? image_shiny : image} alt="Pokemon" />
+            <div className="image-toggle-container">
+              <img className="modal-img" src={isShiny ? image_shiny : image} alt="Pokemon" />
               <button onClick={toggleImage}>
-                {isShiny ? 'Show Regular' : 'Show Shiny'}
+                {isShiny ? 'Regular' : 'Shiny'}
               </button>
-            </>
+            </div>
           )}
         </div>
       );
