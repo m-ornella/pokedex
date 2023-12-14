@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
 import Portal from './Portal';
+import { useTranslation } from "react-i18next";
+import i18n from "../i18n";
+
 
 const PokemonCard = ({ pokemon }) => {
+
+  // const { i18n, t } = useTranslation();
   const { id, name, image, types, height, weight, stats, evolvesTo, generation } = pokemon;
+
 
    const [showModal, setShowModal] = useState(false);
   
@@ -13,10 +19,10 @@ const PokemonCard = ({ pokemon }) => {
       <img src={image} alt={name.en} className="card-img-top" />
       <div className="card-body">
         <h5 className="card-title">{name.en}</h5>
-        <p className="card-text">Type: {types.map(typeId => <span key={typeId}>{typeId} </span>)}</p>
-        <p className="card-text">Height: {height} m</p>
-        <p className="card-text">Weight: {weight} kg</p>
-        <p className="card-text">Generation: {generation} </p>
+        <p className="card-text">Type : {types.map(typeId => <span key={typeId}>{typeId} </span>)}</p>
+        <p className="card-text">{i18n.t('height')} : {height} m</p>
+        <p className="card-text">{i18n.t('weight')} : {weight} kg</p>
+        <p className="card-text">{i18n.t('generation')}: {generation} </p>
         <div>
           <Portal key={pokemon.id} pokemon={pokemon} />
         </div>
@@ -27,3 +33,30 @@ const PokemonCard = ({ pokemon }) => {
 
 export default PokemonCard;
 
+
+
+// class Translator {
+//   constructor(){
+//     this.lang = 'en';
+
+//   }
+   
+//   set(key){
+//     this.lang = key;
+//   }
+
+//   static get(key){
+//     console.log(this.mapEn.get("height"));
+//     if(this.lang==='en')
+//      return this.mapEn.get(key); 
+// else
+//      return this.mapFr.get(key);
+//   }
+
+//    mapFr ={
+//     "height":"hauteur"
+//   };
+//    mapEn ={
+//     "height":"height"
+//   };
+// }

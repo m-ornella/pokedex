@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import PokemonCard from "./components/PokemonCard";
+import Menu from "./components/Menu.jsx";
+
 import "./App.css";
 
 const App = () => {
@@ -24,6 +26,7 @@ const App = () => {
 
   return (
     <div>
+      <Menu />
       <h1>Pokedex</h1>
       <div className="pokemon-container">
         {pokemonData.map((pokemon) => (
