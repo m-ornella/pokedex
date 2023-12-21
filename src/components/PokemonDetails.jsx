@@ -1,7 +1,7 @@
 import PokemonImageSwitcher from "./PokemonImageSwitcher";
 
 const PokemonDetails = ({ onClose, pokemon }) => {
-  const { id, name, image, types, height, weight, stats, evolvesTo } = pokemon;
+  const { id, name, types, height, weight, stats, evolvesTo } = pokemon;
   return (
     <div className="modal-container">
     <div key={id} className="modal-card">

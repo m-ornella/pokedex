@@ -1,17 +1,13 @@
-import React, { useState } from 'react';
-import { createPortal } from 'react-dom';
 import Portal from './Portal';
-import { useTranslation } from "react-i18next";
 import i18n from "../i18n";
 
 
 const PokemonCard = ({ pokemon }) => {
 
   // const { i18n, t } = useTranslation();
-  const { id, name, image, types, height, weight, stats, evolvesTo, generation } = pokemon;
+  const { id, name, image, types, height, weight, generation } = pokemon;
 
 
-   const [showModal, setShowModal] = useState(false);
   
 
   return (
