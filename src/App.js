@@ -30,11 +30,14 @@ const App = () => {
 
   return (
     <div>
-      <Menu />
-      {/* <div className="search-bar"> */}
-      <SearchBar pokemonNames={pokemonNames} />
-      {/* </div> */}
       <h1>Pokedex</h1>
+      <div className="nav-menu">
+        <Menu />
+        {/* <div className="search-bar"> */}
+        <SearchBar pokemonNames={pokemonNames} />
+        {/* </div> */}
+      </div>
+
       <div className="pokemon-container">
         {pokemonData.map((pokemon) => (
           <PokemonCard key={pokemon.id} pokemon={pokemon} />
