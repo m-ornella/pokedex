@@ -16,9 +16,9 @@ const PokemonCard = ({ pokemon }) => {
         <p className="card-text gen">{generation} </p>
         </div>
         <p className="card-text">Type : {types.map(typeId => <span key={typeId}>{typeId} </span>)}</p>
-        <p className="card-text">{i18n.t('height')} : {height} m</p>
+        {/* <p className="card-text">{i18n.t('height')} : {height} m</p>
         <p className="card-text">{i18n.t('weight')} : {weight} kg</p>
-       
+        */}
         <div>
           <Portal key={pokemon.id} pokemon={pokemon} />
         </div>
