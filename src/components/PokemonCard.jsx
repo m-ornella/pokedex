@@ -1,11 +1,10 @@
 import Portal from './Portal';
-import i18n from "../i18n";
 
 
 const PokemonCard = ({ pokemon }) => {
 
   // const { i18n, t } = useTranslation();
-  const { id, name, image, types, height, weight, generation } = pokemon;
+  const { id, name, image, types, generation } = pokemon;
 
   return (
     <div key={id} className="card pokemon-card bg-yellow">

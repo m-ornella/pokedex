@@ -33,7 +33,7 @@ const App = () => {
   return (
     
     <div>
-      <img src="Pokedex_logo.png" alt="Pokedex logo"></img>
+      <center><img src="Pokedex_logo.png" alt="Pokedex logo" ></img></center>
       <div className="nav-menu">
       <Menu />
       <SearchBar pokemonNames={pokemonNames} />
