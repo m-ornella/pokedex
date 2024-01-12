@@ -34,9 +34,10 @@ const App = () => {
     
     <div>
       <img src="Pokedex_logo.png" alt="Pokedex logo"></img>
-
+      <div className="nav-menu">
       <Menu />
       <SearchBar pokemonNames={pokemonNames} />
+      </div>
       <div className="pokemon-container">
         {pokemonData.map((pokemon) => (
           <PokemonCard key={pokemon.id} pokemon={pokemon} />

@@ -15,6 +15,7 @@ i18n.init({
         weight: "Weight",
         generation: "Generation",
         stats: "Statistics",
+        see_more: "see more",
       },
     },
     fr: {
@@ -25,6 +26,7 @@ i18n.init({
         weight: "Poids",
         generation: "Génération",
         stats: "Statistiques",
+        see_more: "voir plus",
       },
     },
   },
