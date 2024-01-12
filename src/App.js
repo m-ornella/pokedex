@@ -4,6 +4,8 @@ import axios from "axios";
 import PokemonCard from "./components/PokemonCard";
 import Menu from "./components/Menu.jsx";
 import SearchBar from "./components/SearchBar";
+import PokemonSearchBar from './components/PokemonSearchBar';
+
 
 import "./App.css";
 
@@ -28,13 +30,24 @@ const App = () => {
     setPokemonNames(pokemonNamesList);
   }, [pokemonData]);
 
+  const handleSearch = () => {
+    // Call the onSearch function with the search filters and sorting options
+    onSearch({
+      generation: generationFilter,
+      type: typeFilter,
+      sort: sortOption,
+    });
+  };
+
   return (
+    
     <div>
+      <img src="Pokedex_logo.png" alt="Pokedex logo"></img>
+      <PokemonSearchBar onSearch={handleSearch} />
       <Menu />
       {/* <div className="search-bar"> */}
       <SearchBar pokemonNames={pokemonNames} />
       {/* </div> */}
-      <h1>Pokedex</h1>
       <div className="pokemon-container">
         {pokemonData.map((pokemon) => (
           <PokemonCard key={pokemon.id} pokemon={pokemon} />
