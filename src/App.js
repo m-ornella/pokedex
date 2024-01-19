@@ -19,15 +19,19 @@ const App = () => {
         );
         console.log("response :", response);
         setPokemonData(response.data.data);
+
+        // Move the mapping logic inside the then block
+        const pokemonNamesList = response.data.data.map(
+          (pokemon) => pokemon.name.en
+        );
+        setPokemonNames(pokemonNamesList);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-    fetchData();
-    const pokemonNamesList = pokemonData.map((pokemon) => pokemon.name.en);
-    setPokemonNames(pokemonNamesList);
-  }, [pokemonData]);
 
+    fetchData();
+  }, []);
   return (
     <div>
       <h1>Pokedex</h1>

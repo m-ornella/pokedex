@@ -22,7 +22,6 @@ export const Menu = () => {
             {label}
           </option>
         ))}
-        
       </select>
     </nav>
   );

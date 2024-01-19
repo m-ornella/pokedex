@@ -1,5 +1,6 @@
 import Portal from './Portal';
 import i18n from "../i18n";
+import { useState } from 'react';
 
 
 const PokemonCard = ({ pokemon }) => {
@@ -7,8 +8,19 @@ const PokemonCard = ({ pokemon }) => {
   // const { i18n, t } = useTranslation();
   const { id, name, image, types, height, weight, generation } = pokemon;
 
+  // const [selectedLanguage, setSelectedLanguage] = useState('en')
+  // const handleLanguage=(e)=>{
+  //   setSelectedLanguage(e.target.value)
+  //   console.log(selectedLanguage)
+  // }
+
+
   return (
     <div key={id} className="card pokemon-card bg-yellow">
+      {/* <div>
+        <p onClick={handleLanguage(e)}>fr</p>
+        <p onClick={handleLanguage(e)}>en</p>
+      </div> */}
       <img src={image} alt={name.en} className="card-img-top" />
       <div className="card-body">
         <div className='name-gen-container'>
@@ -30,29 +42,3 @@ const PokemonCard = ({ pokemon }) => {
 export default PokemonCard;
 
 
-
-// class Translator {
-//   constructor(){
-//     this.lang = 'en';
-
-//   }
-   
-//   set(key){
-//     this.lang = key;
-//   }
-
-//   static get(key){
-//     console.log(this.mapEn.get("height"));
-//     if(this.lang==='en')
-//      return this.mapEn.get(key); 
-// else
-//      return this.mapFr.get(key);
-//   }
-
-//    mapFr ={
-//     "height":"hauteur"
-//   };
-//    mapEn ={
-//     "height":"height"
-//   };
-// }
