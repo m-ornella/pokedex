@@ -1,5 +1,6 @@
 import Portal from './Portal';
 
+
 const PokemonCard = ({ pokemon }) => {
 
   // const { i18n, t } = useTranslation();
