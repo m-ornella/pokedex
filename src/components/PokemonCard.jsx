@@ -1,12 +1,15 @@
 import Portal from './Portal';
+<<<<<<< HEAD
 import i18n from "../i18n";
 import { useState } from 'react';
+=======
+>>>>>>> 4fc5aba1ecfdbc37c97d17073a7b13aece49b8b7
 
 
 const PokemonCard = ({ pokemon }) => {
 
   // const { i18n, t } = useTranslation();
-  const { id, name, image, types, height, weight, generation } = pokemon;
+  const { id, name, image, types, generation } = pokemon;
 
   // const [selectedLanguage, setSelectedLanguage] = useState('en')
   // const handleLanguage=(e)=>{

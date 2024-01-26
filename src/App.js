@@ -5,6 +5,7 @@ import PokemonCard from "./components/PokemonCard";
 import Menu from "./components/Menu.jsx";
 import SearchBar from "./components/SearchBar";
 
+
 import "./App.css";
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
       }
     };
 
+<<<<<<< HEAD
     fetchData();
   }, []);
   return (
@@ -41,7 +43,17 @@ const App = () => {
         <SearchBar pokemonNames={pokemonNames} />
         {/* </div> */}
       </div>
+=======
+>>>>>>> 4fc5aba1ecfdbc37c97d17073a7b13aece49b8b7
 
+  return (
+    
+    <div>
+      <center><img src="Pokedex_logo.png" alt="Pokedex logo" ></img></center>
+      <div className="nav-menu">
+      <Menu />
+      <SearchBar pokemonNames={pokemonNames} />
+      </div>
       <div className="pokemon-container">
         {pokemonData.map((pokemon) => (
           <PokemonCard key={pokemon.id} pokemon={pokemon} />
